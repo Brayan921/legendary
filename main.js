@@ -19,7 +19,7 @@
 				
 				draw(); 		
 				playerS = 1; 
-				turn(); 
+				
 			}
 			
 		
@@ -42,7 +42,7 @@
 						
 							if (gameB[row][col] == i) {
 								if ((gameB[row][col+1] == i) && (gameB[row][col+2] == i) && (gameB[row][col+3] == i)) {
-									endGame(i);
+									win(i);
 									return true; 
 								}
 							}
@@ -57,7 +57,7 @@
 						
 							if (gameB[row][col] == i) {
 								if ((gameB[row+1][col] == i) && (gameB[row+2][col] == i) && (gameB[row+3][col] == i)) {
-									endGame(i); 
+									win(i); 
 									return true; 
 								}
 							}
@@ -71,7 +71,7 @@
 					    for (row = 0; row <=2; row++) {
         					if (gameB[row][col] == i) {
 								if ((gameB[row+1][col+1] == i) && (gameB[row+2][col+2] == i) && (gameB[row+3][col+3] == i)) {
-									endGame(i);
+									win(i);
 									return true;
 								}
 							}
@@ -87,7 +87,7 @@
 						
 							if (gameB[row][col] == i) {
 								if ((gameB[row-1][col+1] == i) && (gameB[row-2][col+2] == i) && (gameB[row-3][col+3] == i)) {
-									endGame(i);
+									win(i);
 									return true;
 								}
 							}
@@ -98,12 +98,7 @@
 			
 
 		
-			function turn() {
-				if (gameOn) { 
 					
-					document.getElementById('game_info').innerHTML = "Current Player: Player " + playerS + " <span class='player"+playerS+"'>(" + playerC[playerS] + ")</span>";
-				}
-			}			
 			
 
 			function drop(col) {
@@ -120,15 +115,21 @@
 								playerS = 1;
 							}
 						
-							turn(); 
 
 							return true;
 						}
 					}
 			}
 
-			function endGame(Winner) {
+			function win(Winner) {
 				
-				document.getElementById("info").innerHTML = "Player "+ playerS + " Wins"
-				gameOn = false; return true;
+				if(playerS == 1) {
+					document.getElementById("info").innerHTML = "<span style='background-color: red;'> Winner </span>"
+
+				} 
+				else if(playerS == 2) {
+					document.getElementById("info").innerHTML = "<span style='background-color: yellow;'> Winner </span>"
+
+				}
+
 			}

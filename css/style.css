@@ -1,3 +1,6 @@
+body {
+    background-color: green;
+}
 .click_button {
     height: 42px;
     width: 42px;
@@ -15,7 +18,10 @@
     border-radius: 50px;
 }
 
-
+#info {
+    font-size: 2em;
+    text-align: center;
+}
 .blank {
     background-color: #DDDDDD;
 }
@@ -36,9 +42,20 @@
 }
 
 .dropB {
-    margin: 0 auto;
-    padding: 10%;
+    padding: 20%;
+}
+.dropB:hover {
+    background-color: #555555;
 }
 #game_table {
     background-color: blue;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 25px;
+    margin: 40px auto;
+}
+#begin {
+    background-color: yellow;
+    font-size: 2em;
+    margin-left: 900px;
 }

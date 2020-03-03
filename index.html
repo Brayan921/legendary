@@ -1,16 +1,15 @@
 <html> 
     <head> 
-        
+        <title>Connect 4</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" /> 
         <script src="main.js"></script> 
     </head> 
     <body onload="start()">
 		
+		<h1 style="text-align: center;">Connect the Four.</h1>
 	
-		<button id="begin" onclick="start();">Restart</button>
-
 		<div id="gameboard">
-
+			<img >
 			<div id="info">
 			</div>
 
@@ -18,7 +17,7 @@
 				<thead>
 					<tr>
 						
-						<td><button class="dropB" onclick="drop(0);"> ↓ </button></td>
+						<td><button class="dropB" onclick="drop(0);">↓</button></td>
 						<td><button class="dropB" onclick="drop(1);">↓</button></td>
 						<td><button class="dropB" onclick="drop(2);">↓</button></td>
 						<td><button class="dropB" onclick="drop(3);">↓</button></td>
@@ -28,7 +27,6 @@
 					</tr>
 				</thead>
 				<script>
-				
 				for (var row	=0; row<=5; row++) {
 					
 					document.writeln("<tr>");	
@@ -38,13 +36,17 @@
 					}
 		
 					document.writeln("</tr>");	
-				}						
+				}				
+						
 										
 				</script>
 			</table>
+			<button id="begin" onclick="start();">Reset</button>
 
 			<div id="game_status">
 			</div>
 		</div>
+		
+
 	</body>
 </html>

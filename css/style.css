@@ -1,23 +1,22 @@
 .click_button {
     height: 42px;
     width: 42px;
-    border-radius: 24px;
     background-color: rgba(255,0,0,1);
     cursor: pointer;
 }
 
 
 .piece {
-    height: 32px;
-    width: 32px;
+    height: 50px;
+    width: 50px;
     display:block;
-    border-radius: 16px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 50px;
 }
 
 
-.player0 {
+.blank {
     background-color: #DDDDDD;
 }
 
@@ -31,6 +30,15 @@
 
 .board_square {
     border: 1px solid #555555;
-    height: 36px;
-    width: 36px;
+    border-radius: 50px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.dropB {
+    margin: 0 auto;
+    padding: 10%;
+}
+#game_table {
+    background-color: blue;
 }

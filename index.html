@@ -4,32 +4,32 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" /> 
         <script src="main.js"></script> 
     </head> 
-    <body onload="start();">
+    <body onload="start()">
 		
 	
-		<button id="begin_game" onclick="start();">Start</button>
+		<button id="begin" onclick="start();">Restart</button>
 
 		<div id="gameboard">
 
-			<div id="game_info">
+			<div id="info">
 			</div>
 
 			<table id="game_table">
 				<thead>
 					<tr>
 						
-						<td><button onclick="drop(0);">Drop</button></td>
-						<td><button onclick="drop(1);">Drop</button></td>
-						<td><button onclick="drop(2);">Drop</button></td>
-						<td><button onclick="drop(3);">Drop</button></td>
-						<td><button onclick="drop(4);">Drop</button></td>
-						<td><button onclick="drop(5);">Drop</button></td>
-						<td><button onclick="drop(6);">Drop</button></td>
+						<td><button class="dropB" onclick="drop(0);"> ↓ </button></td>
+						<td><button class="dropB" onclick="drop(1);">↓</button></td>
+						<td><button class="dropB" onclick="drop(2);">↓</button></td>
+						<td><button class="dropB" onclick="drop(3);">↓</button></td>
+						<td><button class="dropB" onclick="drop(4);">↓</button></td>
+						<td><button class="dropB" onclick="drop(5);">↓</button></td>
+						<td><button class="dropB" onclick="drop(6);">↓</button></td>
 					</tr>
 				</thead>
 				<script>
 				
-				for (var ro=0; row<=5; row++) {
+				for (var row	=0; row<=5; row++) {
 					
 					document.writeln("<tr>");	
 					for (var col=0; col<=6; col++) {

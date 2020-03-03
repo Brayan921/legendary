@@ -5,7 +5,7 @@
 			playerC[1] = "red"; 
 			playerC[2] = "yellow";
 			
-			function start() {
+			function reset() {
 				
 				if (gameOn == true) return false; 
 
@@ -121,6 +121,7 @@
 					}
 			}
 
+
 			function win(Winner) {
 				
 				if(playerS == 1) {
@@ -131,5 +132,5 @@
 					document.getElementById("info").innerHTML = "<span style='background-color: yellow;'> Winner </span>"
 
 				}
-
+				gameOn = false; return true;
 			}

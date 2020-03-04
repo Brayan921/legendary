@@ -125,12 +125,12 @@
 			function win(Winner) {
 				
 				if(playerS == 1) {
-					document.getElementById("info").innerHTML = "<span style='background-color: red;'> Winner </span>"
-
+					document.getElementById("info").innerHTML = "Winner"
+					document.getElementById("info").style.backgroundColor = "red"
 				} 
 				else if(playerS == 2) {
-					document.getElementById("info").innerHTML = "<span style='background-color: yellow;'> Winner </span>"
-
+					document.getElementById("info").innerHTML = "Winner"
+					document.getElementById("info").style.backgroundColor= "yellow"
 				}
 				gameOn = false; return true;
 			}
